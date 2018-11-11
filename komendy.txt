@@ -3,17 +3,19 @@ git --version
 git config --global user.email "piotr.stani@o2.pl"
 git config --global user.name "piotrstani"
 
- /* utwórz w lokalizacij repozytorium */
-git init
+ 
 
+/* utwórz w lokalizacij repozytorium */
+git init
  /* sprawdŸ czy s¹ zmiany*/
 git status
 
+
  /*dodaj do œledzenia*/
 git add xyz.txt 
-
  /*dodaj do œledzenia - wszytsko*/
 git add . 
+
 
 /* dodaj zmianê */
 git commit -m"...komentarz" 
@@ -24,37 +26,87 @@ git remote add origin https://github.com/piotrstani/java.git
  /* dodaj zmianê na repozytorium online - github */
 git push -u origin master
 
+
+
  /*tworzenie nowej ga³êzi*/
+git branch NewBranch
 
 ---master -------X----
                 /
 ---NewBranch---/
 
-git branch NewBranch
 
  /*sprawi ze w repozytroium bêd¹ widoczne pliki/zmiany z ga³êzi NewBranch!!!*/
 git checkout NewBranch
 
+...
 dir > x.txt
 git status
 git add .
 git commit -m"dodanie branch | dodanie pliku x"
+...
 
  /*dodanie zmian do ga³êzi NewBranch*/
 git push -u origin NewBranch
-
  /* sprawi ze w repozytroium bêd¹ widoczne pliki/zmiany z ga³êzi master!!!*/
 git checkout master 
 
  /*po³¹cz NewBranch z master (bêd¹c w master), na github powinien byæ komunikat o tym ¿e ga³¹¿ jest identyczna z masterem */
 git merege NewBranch
 
+
 /*usuwanie ga³êzi z repozytorium lokalnego*/
 git branch -d NewBranch
-
 /*usuwanie ga³êzi z repozytorium github*/
 git push origin -- delete NewBranch
 
+/*TAGOWANIE - punkty kontrolne/kamienie milowe np. miejsca do wypuszczenia wersij*/
+git tag v1.1
+git tag
+git tag -a v1.2 -m"wersja pierwsza"
+git show v1.2
+git tag -l "v1.*"
+
+/*wysy³anie na github -pojedyñczo*/
+git push origin v1.0
+/*wysy³anie na github -wszystko*/
+git push origin --tags
+git push --tags
+
+git tag -d v1.0
+git tag --delete v1.1
+
+git push origin -d v1.0
+git push origin --delete v1.1
+git push origin :v1.0
+
+git tag -d v1.0 v1.1
+git push origin --tags v1.0 v1.1
+
+/*tworzy ga³¹Ÿ z wersij taga*/
+git checkout -b version1 v1.0
+
+/*tworzy taga na podstawie taga hisorycznego*/
+git tag v0.1 6c420b5d
 
 git log /*log zmian*/
 git -help
+
+
+                                        git tag                      git tag	
+                                         v1.0                         v1.1
+                                           |                            |
+                                           |                            |
+MASTER BRANCH - git commit[1] - git commit[2] -git commit[3]-git commit[4]
+
+
+
+
+
+
+
+
+
+
+
+
