@@ -5,29 +5,56 @@ git config --global user.name "piotrstani"
 
  /* utwórz w lokalizacij repozytorium */
 git init
+
  /* sprawdŸ czy s¹ zmiany*/
 git status
+
  /*dodaj do œledzenia*/
 git add xyz.txt 
+
  /*dodaj do œledzenia - wszytsko*/
 git add . 
+
 /* dodaj zmianê */
 git commit -m"...komentarz" 
 
-/* po³¹cz z repozytorium on line - github*/
+ /* po³¹cz z repozytorium on line - github*/
 git remote add origin https://github.com/piotrstani/java.git
 
-/* dodaj zmianê na repozytorium online - github */
+ /* dodaj zmianê na repozytorium online - github */
 git push -u origin master
 
+ /*tworzenie nowej ga³êzi*/
+
+---master -------X----
+                /
+---NewBranch---/
+
 git branch NewBranch
+
+ /*sprawi ze w repozytroium bêd¹ widoczne pliki/zmiany z ga³êzi NewBranch!!!*/
 git checkout NewBranch
+
 dir > x.txt
 git status
 git add .
-git commit -m"branch | dodanie pliku x"
+git commit -m"dodanie branch | dodanie pliku x"
+
+ /*dodanie zmian do ga³êzi NewBranch*/
 git push -u origin NewBranch
-git checkout master /* sprawi ze w repozytroium bêd¹ widoczne pliki/zmiany z ga³êzi master!!!*/
+
+ /* sprawi ze w repozytroium bêd¹ widoczne pliki/zmiany z ga³êzi master!!!*/
+git checkout master 
+
+ /*po³¹cz NewBranch z master (bêd¹c w master), na github powinien byæ komunikat o tym ¿e ga³¹¿ jest identyczna z masterem */
+git merege NewBranch
+
+/*usuwanie ga³êzi z repozytorium lokalnego*/
+git branch -d NewBranch
+
+/*usuwanie ga³êzi z repozytorium github*/
+git push origin -- delete NewBranch
+
 
 git log /*log zmian*/
 git -help
