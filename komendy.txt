@@ -1,0 +1,33 @@
+dir > xyz.txt
+git --version
+git config --global user.email "piotr.stani@o2.pl"
+git config --global user.name "piotrstani"
+
+ /* utwórz w lokalizacij repozytorium */
+git init
+ /* sprawdŸ czy s¹ zmiany*/
+git status
+ /*dodaj do œledzenia*/
+git add xyz.txt 
+ /*dodaj do œledzenia - wszytsko*/
+git add . 
+/* dodaj zmianê */
+git commit -m"...komentarz" 
+
+/* po³¹cz z repozytorium on line - github*/
+git remote add origin https://github.com/piotrstani/java.git
+
+/* dodaj zmianê na repozytorium online - github */
+git push -u origin master
+
+git branch NewBranch
+git checkout NewBranch
+dir > x.txt
+git status
+git add .
+git commit -m"branch | dodanie pliku x"
+git push -u origin NewBranch
+git checkout master /* sprawi ze w repozytroium bêd¹ widoczne pliki/zmiany z ga³êzi master!!!*/
+
+git log /*log zmian*/
+git -help
