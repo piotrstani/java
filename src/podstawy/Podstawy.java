@@ -3,11 +3,11 @@ package podstawy;
 
 public class Podstawy {
 
-    /* int - l. całkowita */
+ 
     
     public static void main(String[] args) {
         
-    /* 
+    /* ZMIENNE 
         deklaracja zmiennych lokalnych 
         pierwsza litera z małej
         druga litera z dużej
@@ -70,6 +70,7 @@ public class Podstawy {
                        
      /* println - łamanie lini, print - brak łamania linii */
      /* ; - rozkaz */
+        System.out.println("*****ZMIENNE****");
         System.out.println(cLong);
         System.out.println("Imię: " 
                 + imie 
@@ -88,6 +89,8 @@ public class Podstawy {
     
     int wynik6 = aInt / (int)bLong; /*kompilator zwraca błąd - tracenie precyzij*/
         
+    System.out.println("*****RZUTOWANIE****");
+    
         System.out.println("Wynik 1 int/long: "+ aInt / bLong);
         System.out.println("Wynik 2 int/long rzutowanie na double: "+ (double)aInt / bLong);
         System.out.println("Wynik 3 int/long rzutowanie na double: "+ aInt / (double)bLong);
@@ -98,6 +101,50 @@ public class Podstawy {
         
         System.out.println(1/5); 
         System.out.println(1.0/5);
+        
+        
+        /* OPERATORY ARYTMETYCZNE 
+        
+        +=  dofaj do wartości 
+        -=  odejmnij
+        /=  podziel
+        *=  pomnóż
+        %=  reszta z dzielenia, np. jeśli chcemy realiozwać coś co 3 razy 
+            1 mod 3  = 1, 2 mod 3 = 2, 3 mod 3 = 0, 
+        
+        % znak modulo
+        
+        ++ inkrementacja +1  <=> a + 1
+        -- dekrementacja -1  <=> a - 1
+        
+        x++ POST inkrementacja +1 po wyświetleniu
+        x-- POST dekrementacja -1 po wyświetleniu
+        
+        ++x PRE inkrementacja +1 przed wyświetleniem
+        --x PRE dekrementacja -1 przed wyświetleniem     
+        
+        */
+        
+        int aOperatory = 5;
+        aOperatory += 5;
+        
+        int bOperatory;
+        bOperatory = 2 % 3;
+        
+        int cOperatory = 7;
+        cOperatory %= 3;
+        
+        int dOperatory = 100;
+        int eOperatory = 200;
+        
+        System.out.println("*****OPERATORY ARYTMETYCZNE****");
+        System.out.println(aOperatory);
+        System.out.println(bOperatory);
+        System.out.println(cOperatory);
+        System.out.println("POST x++: " + dOperatory++);
+        System.out.println("Pre ++x: " + ++eOperatory);
+         System.out.println("POST x++ kolejne wyświetlenie: " + dOperatory);
+        
     }
     
 }
