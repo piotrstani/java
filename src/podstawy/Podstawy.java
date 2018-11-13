@@ -143,8 +143,26 @@ public class Podstawy {
         System.out.println(cOperatory);
         System.out.println("POST x++: " + dOperatory++);
         System.out.println("Pre ++x: " + ++eOperatory);
-         System.out.println("POST x++ kolejne wyświetlenie: " + dOperatory);
+        System.out.println("POST x++ kolejne wyświetlenie: " + dOperatory);
         
+         /* OPERATORY RELACYJNE (PORÓWNANIA) 
+        
+         x == y  czy x jest równy y wynik jest logiczny boolean
+         x != y  czy jest x jest różny od y 
+         >    większe
+         <    mniejsze
+         >=   większe róne
+         <=   mniejsze równe
+        
+        */
+         
+        
+         boolean isTrue = 4 == 4;
+         if (4 == 4 )
+         
+         System.out.println("*****OPERATORY RELACYJNE****");
+                  System.out.println(isTrue);
+         
     }
     
 }
