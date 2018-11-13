@@ -1,0 +1,34 @@
+CTRL + S (save) - zapisanie pliku
+
+CTRL + C (copy) - kopiowanie
+CTRL + V - wklejenie
+
+CTRL + X - wyciêcie 
+
+CTRL + Z - cofniêcie tego co przed chwil¹ zrobiliœmy
+CTRL + Y - cofniêcie cofniêcia ^^
+
+CTRL + F (find) szukanie w pliku
+
+CTRL + backspace - usuwanie pojedynczego poprzedniego wyrazu
+
+TAB - wciêcie
+SHITF + TAB - cofniêcie wciêcia
+
+END / HOME - przeskoczenie na koniec / pocz¹tek linii
+
+CTRL + A (all) - zaznaczenie ca³ego pliku
+
+SHIFT + END / SHIFT + HOME - zaznaczenie ca³ej lini do koñca / zaznaczenie ca³ej lini do pocz¹tku
+
+SHIFT + STRZA£KI góra i dó³ - zaznaczenie ca³ej lini
+SHIFT + STRZA£KI lewa/prawa - zaznaczenie literki w lewo i w prawo
+
+CTRL + SHIFT + strza³ki lewa/prawa - zaznaczenie lewa/prawa ca³ego s³owa
+CTRL + SHIFT + strza³ka w dó³ / górê - skopiowanie ca³ej linii w dó³
+
+CTRL + HOME - przeskoczenie na pocz¹tek pliku
+CTRL + END - przeskoczenie na koniec pliku
+
+CTRL + SHIFT + HOME - zaznaczenie ca³ej treœci od zaznaczenie do jego pocz¹tku
+CTRL + SHIFT + END - - zaznaczenie ca³ej treœci od zaznaczenie do koñca
