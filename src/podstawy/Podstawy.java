@@ -158,11 +158,36 @@ public class Podstawy {
          
         
          boolean isTrue = 4 == 4;
-         if (4 == 4 )
+         if (4 == 4 ) /* przykład pętli */
          
          System.out.println("*****OPERATORY RELACYJNE****");
-                  System.out.println(isTrue);
+         System.out.println(isTrue);
          
+            /* OPERATORY LOGICZNE
+        
+            true vs false
+         
+            !   negacja
+            !   (true)  -> false
+            !   (false) -> true
+            &&  koniunkcja ("i")
+            ||  alternatywa ("lub")
+        */
+         
+        
+         int aLogiczne = 5,
+             bLogiczne = 5,
+             cLogiczne = 6;
+         
+             
+         
+         System.out.println("*****OPERATORY LOGICZNE****");
+         
+          if (aLogiczne == bLogiczne && !(aLogiczne == cLogiczne))              
+            System.out.println("KONIUNKCJA - TAK");
+          
+          if (aLogiczne == bLogiczne || aLogiczne == cLogiczne)              
+            System.out.println("ALTERNATYWA - NIE");
     }
     
 }
