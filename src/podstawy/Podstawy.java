@@ -202,7 +202,7 @@ public class Podstawy {
           
           0101
           0100
-          ----
+          ---- 
           0100 &
           0101 |
           0001 ^
@@ -210,22 +210,113 @@ public class Podstawy {
           0100 x << 1 1000
           0100 x >> 1 0010  
           
-        */ 
+          0001
+          ~ 1110  <- 1 na lewym bicie oznacza liczbę ujmeną???
           
-        
-        
+          
+          
+        */           
+                
          System.out.println("*****OPERATORY BITOWE****");
          System.out.println(5&4);
          System.out.println(5|4);
          System.out.println(5^4);
          System.out.println(4 << 1);
          System.out.println(4 >> 1);
+         System.out.println(~1);
           
+        /* INSTRUKCJE WARUNKOWE &  PO CO SĄ KLAMERKI 
+        
           
+            if (WYRAŻENIE)
+                instrukcja;
+            else if (WYRAŻENIE) 
+                instrukcja;
+            else  
+              {  
+                instrukcja1;
+                instrukcja2;
+              }              
           
+        */           
+                
+         System.out.println("*****INSTRUKCJE WARUNKOWE****");
           
+          int aWarunkowe = 5,
+              bWarunkowe = 5; 
           
+         System.out.println("a = " + aWarunkowe + " b = " + bWarunkowe); 
+         
+         if (aWarunkowe != bWarunkowe) 
+            System.out.println("a różne od b" + (aWarunkowe != bWarunkowe));  
+         else
+            System.out.println("a równe b"+ (aWarunkowe != bWarunkowe));
+         
+             
+        if (aWarunkowe > bWarunkowe) 
+            System.out.println("a > b");      
+        else if (aWarunkowe > bWarunkowe)
+        {
+            System.out.println("a < b");
+            System.out.println("UŻYCIE KLAMRY");
+        } 
+        else 
+            System.out.println("a = b");                  
+           
           
+        /* INSTRUKCJA SWITCH (przełącznik)
+              
+        instrukcja powoduje przeskok do mijesca i realizacje dalszych instrukcij
+        break - przerwanie
+        
+        działa dla ZMIENNYCH - INT, CHAR 
+        
+          switch (x)
+        
+            case x1:
+               instrukacja;
+               break;
+            case x2:
+               instrukacja;
+               break;
+            default:
+                instrukcja;
+        
+        */           
+        System.out.println("*****INSTRUKCJA SWITCH****");
+        
+        char aSwitch = 'a';
+        switch(aSwitch)
+        {
+            case 'a':
+                System.out.println(" a równe = 50");
+                System.out.println(" a równe = 50");
+                break;
+            case 100:
+                System.out.println(" a równe = 100");
+                break; 
+            default:
+                System.out.println(" a równe = " +aSwitch);              
+        }      
+                  
+        /* WRAZENIA WARUNKOWE
+              
+     WYRAZENIE ? co ma się stać jeśli TRUE : co ma się stać jeśli FALSE
+        
+        */    
+        
+        System.out.println("*****WYRAŻENIE WARUNKOWE***");  
+        
+        int xWyrazenieWarunkowe  =5;
+        
+        if (xWyrazenieWarunkowe % 2 == 0)
+            System.out.println("PARZYSTA");
+        else
+            System.out.println("NIEPARZYSTA");
+        
+       String wynikWyrazeniaWarunkowego = xWyrazenieWarunkowe % 2 == 0 ? "parzysta" : "nieparzysta";
+            System.out.println(wynikWyrazeniaWarunkowego);
+               
     }
     
 }
