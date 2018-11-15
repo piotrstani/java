@@ -145,7 +145,7 @@ public class Podstawy {
         System.out.println("Pre ++x: " + ++eOperatory);
         System.out.println("POST x++ kolejne wyświetlenie: " + dOperatory);
         
-         /* OPERATORY RELACYJNE (PORÓWNANIA) 
+        /* OPERATORY RELACYJNE (PORÓWNANIA) 
         
          x == y  czy x jest równy y wynik jest logiczny boolean
          x != y  czy jest x jest różny od y 
@@ -163,7 +163,7 @@ public class Podstawy {
          System.out.println("*****OPERATORY RELACYJNE****");
          System.out.println(isTrue);
          
-            /* OPERATORY LOGICZNE
+        /* OPERATORY LOGICZNE
         
             true vs false
          
@@ -188,6 +188,44 @@ public class Podstawy {
           
           if (aLogiczne == bLogiczne || aLogiczne == cLogiczne)              
             System.out.println("ALTERNATYWA - NIE");
+          
+        /* OPERATORY BITOWE) 
+        
+          
+            &           iloczyn bitowy AND
+            |           suma bitowa    OR
+            ^           XOR  (1^1->0, 0^0->0, 1^0->1, 0^1->1
+          
+            x << 1      przesuniecie w lewo o 1
+            x >> 2      przesunięcie w prawo o 2
+            ~           negacja bitowa  
+          
+          0101
+          0100
+          ----
+          0100 &
+          0101 |
+          0001 ^
+          
+          0100 x << 1 1000
+          0100 x >> 1 0010  
+          
+        */ 
+          
+        
+        
+         System.out.println("*****OPERATORY BITOWE****");
+         System.out.println(5&4);
+         System.out.println(5|4);
+         System.out.println(5^4);
+         System.out.println(4 << 1);
+         System.out.println(4 >> 1);
+          
+          
+          
+          
+          
+          
     }
     
 }
