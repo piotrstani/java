@@ -316,7 +316,90 @@ public class Podstawy {
         
        String wynikWyrazeniaWarunkowego = xWyrazenieWarunkowe % 2 == 0 ? "parzysta" : "nieparzysta";
             System.out.println(wynikWyrazeniaWarunkowego);
-               
+      
+     /* TABLICE JEDNOWYMIAROWE
+              
+     np. jeśli potrzebujesz duzej ilosci zmiennych 
+     
+           --------------------------------
+            tab[0] tab[1]  tab[2]  tab[3]
+           --------------------------------  
+            
+    */  
+     
+        int[] tablicaJednowmiarowaA; 
+        
+        /*
+        a można też 
+            int tab[]; 
+        a można od razu 
+            int[] tab = new int[5]; */
+        
+        tablicaJednowmiarowaA = new int[5];
+        
+        /* 
+        tak jakbyć zrobili x5 deklarcaje zmiennych
+        ...
+        int A,
+            B,
+            C;
+        ...
+        */
+        
+        System.out.println("*****TABLICE JEDNOWYMIAROWE***"); 
+        
+        tablicaJednowmiarowaA[0]=1;
+        tablicaJednowmiarowaA[1]=2;
+        tablicaJednowmiarowaA[2]=3;
+        tablicaJednowmiarowaA[3]=4;
+        
+        System.out.println("TAB1= " + tablicaJednowmiarowaA[0] + " a TAB4= " + tablicaJednowmiarowaA[3]); 
+          
+        /* LENGHT */
+        
+        int[]tablicaJednowmiarowaB = {23, 33, 43, 53, 63};
+        
+        System.out.println(tablicaJednowmiarowaB[3]);
+        System.out.println(tablicaJednowmiarowaB.length);
+        System.out.println(tablicaJednowmiarowaB[tablicaJednowmiarowaB.length -1]);    
+            
+               /* TABLICE WIELOWYMIAROWE
+        
+        ---------------
+        0 0 | 0 1 | 0 2
+        ---------------
+        ---------------
+        1 0 | 1 1 | 1 2
+        ---------------       
+         --------------
+        2 0 | 2 1 | 2 2
+        ---------------       
+        ---------------
+        3 0 | 3 1 | 3 2
+        ---------------
+        int [wiersze][kolmny]
+        
+        
+        */
+        
+        System.out.println("*****TABLICE WIELOWYMIAROWE***");      
+        
+        int[][] tablicaWielowymiarowaA = new int[4][3];
+        tablicaWielowymiarowaA[0][0] = 34;
+        
+        System.out.println(tablicaWielowymiarowaA[0][0]);      
+                
+         int[][] tablicaWielowymiarowaB =
+         { 
+             {1,2,3},
+             {4,5,6},
+             {7,8,9},
+             {10, 11, 12},
+         };
+
+        System.out.println(tablicaWielowymiarowaB[1][1]); 
+        
+        
     }
     
 }
