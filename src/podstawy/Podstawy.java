@@ -483,9 +483,77 @@ public class Podstawy {
                         }
                       System.out.println();
                   }
-                    
+                 
+                 /* BREAK i CONTINUE
+                  
+                  break - np. werfikacij czy ktoś kliknoł jeśli tak to przerwanie wychodzimy z pętli
+                  continue - przerwanie wykonywania 
+                  */
+                
+                 
+                  System.out.println("***PĘTLA W PETLI - TABLICZKA MNOŻENIA***");  
+                  
+                  
+                  for (int i_break =0; i_break <= 10; i_break++)
+                  {
+                     if (i_break % 2  != 0)
+                        continue;
+                     
+                         System.out.println(i_break);
+                  } 
+                  
+                  System.out.println("***TABLICZKA MNOŻENIA BEZ NIEPARZYSTYCH WIERSZY***");
+                  
+                  for (int mnożna_i =1; mnożna_i <= 10; mnożna_i++ )
+                  {   if (mnożna_i % 2 == 0)
+                          continue;
+                  {
+                      for (int tabliczka_i = 1; tabliczka_i <= 10; tabliczka_i++)
+                        {
+                            System.out.print( (tabliczka_i * mnożna_i )+ " "); 
+                        }
+                      System.out.println();
+                  }                  
+                  }
+                  
+                  System.out.println("***TABLICZKA MNOŻENIA Z BREAK**");
+                  for (int mnożna_i =1; mnożna_i <= 10; mnożna_i++ )
+                  {   if (mnożna_i % 2 == 0)
+                          break;
+                  {
+                                           
+                      for (int tabliczka_i = 1; tabliczka_i <= 10; tabliczka_i++)
+                        {
+                            System.out.print( (tabliczka_i * mnożna_i )+ " "); 
+                        }
+                      System.out.println();
+                  }                  
+                  }
+                  
+                  System.out.println("***SUMOWANIE ZMIENNYCH**");
+                          
+                   int[] sumaZmiennych = {1, 2, 3, 4, 10};
+                   int sumaZmiennych_wynik =0;
+                
+                   for (int sumaZmiennych_i = 0; sumaZmiennych_i < sumaZmiennych.length; sumaZmiennych_i++ )
+                    {
+                        sumaZmiennych_wynik += sumaZmiennych[sumaZmiennych_i];
+                    }
+                   System.out.println(sumaZmiennych_wynik);
+    
+                   System.out.println("***SUMOWANIE ZMIENNYCH - ENHANCED FOR**");
+                          
+                   int[] sumaZmiennych2 = {1, 2, 3, 4, 10};
+                   int sumaZmiennych_wynik2 =0;
+                
+                   for (int sumaZmiennych_liczby: sumaZmiennych2  )
+                    {
+                        sumaZmiennych_wynik2 += sumaZmiennych_liczby;
+                    }
+                   System.out.println(sumaZmiennych_wynik2);   
+    
+    
     }
-    
-    
+      
     
 }
