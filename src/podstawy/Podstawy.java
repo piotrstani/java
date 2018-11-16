@@ -396,10 +396,74 @@ public class Podstawy {
              {7,8,9},
              {10, 11, 12},
          };
+         
+         
+         
 
-        System.out.println(tablicaWielowymiarowaB[1][1]); 
+         
+        
+        /* PĘTLE WHILE i DO WHILE
+        
+       
         
         
+        */
+                     
+        
+        
+        System.out.println("*****WHILE I DO WHILE***");       
+    
+                 String[] tablicaStringow=
+         {
+                "Java 1",
+                "Java 2",
+                "Java 3",
+                "Java 4",
+                "Java 5",
+         };
+            
+                               
+                int i = 0; 
+                 while(i < tablicaStringow.length)
+                 {
+                     if (i == (tablicaStringow.length -1) )
+                     {
+                         System.out.println(tablicaStringow[i++]);
+                      /* tablicaStringow[i++]*/
+                     System.out.println("KONIEC PĘTLI WHILE");
+                     }
+                     else
+                     {
+                         System.out.println(tablicaStringow[i]);
+                         i++;
+                     }                                        
+                 }
+               
+                 /* DO WHILE - najpierw rób a potem sprawdź warunek 
+                 do 
+                 {
+                     System.out.println(tablicaStringow[--i]);
+                 }
+                     while(i < tablicaStringow.length); */
+                 
+                 int tabEx_10[] = new int[9];
+                 int Ex_10_licznik=0;
+                 int Ex_10_liczba;
+                 
+                 while (Ex_10_licznik < tabEx_10.length)
+                 {
+                    tabEx_10[Ex_10_licznik]= 10 * (Ex_10_licznik+1);
+                     
+                   
+                    System.out.println(tabEx_10[Ex_10_licznik]);
+                    Ex_10_licznik++;
+                 }
+                 
+                 
+                 
+                 
     }
+    
+    
     
 }
