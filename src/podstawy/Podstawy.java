@@ -460,8 +460,30 @@ public class Podstawy {
 
                    System.out.println(tabEx_10[Ex_10_licznik]);
                }    
+                  /* PĘTLA ENHANCED FOR */
+                
+                  // z tablicaStringow pobierz nazwę i wypisz
+                System.out.println("*****ENHANCED FOR***"); 
+                
+                    for(String myEnhanced: tablicaStringow )
+                    {
+                       System.out.println(myEnhanced); 
+                    }
                  
-                 
+                    
+                  /* PĘTLA W PĘTLI */
+                
+                  System.out.println("***PĘTLA W PETLI - TABLICZKA MNOŻENIA***");
+                  
+                  for (int mnożna_i =1; mnożna_i <= 10; mnożna_i++ )
+                  {
+                      for (int tabliczka_i = 1; tabliczka_i <= 10; tabliczka_i++)
+                        {
+                            System.out.print( (tabliczka_i * mnożna_i )+ " "); 
+                        }
+                      System.out.println();
+                  }
+                    
     }
     
     
