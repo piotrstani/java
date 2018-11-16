@@ -397,20 +397,11 @@ public class Podstawy {
              {10, 11, 12},
          };
          
-         
-         
-
-         
-        
-        /* PĘTLE WHILE i DO WHILE
-        
+             
        
         
-        
-        */
-                     
-        
-        
+        /* PĘTLE WHILE i DO WHILE */                    
+               
         System.out.println("*****WHILE I DO WHILE***");       
     
                  String[] tablicaStringow=
@@ -421,8 +412,7 @@ public class Podstawy {
                 "Java 4",
                 "Java 5",
          };
-            
-                               
+                                         
                 int i = 0; 
                  while(i < tablicaStringow.length)
                  {
@@ -459,7 +449,17 @@ public class Podstawy {
                     Ex_10_licznik++;
                  }
                  
-                 
+                /* PĘTLA FOR */
+                // for (inicjalizacja zmiennych; warunek; co ma się stać po wykonaiu instrukcij
+                System.out.println("*****FOR***");  
+                
+                
+               for ( Ex_10_licznik =0; Ex_10_licznik < tabEx_10.length; Ex_10_licznik++)
+               {
+                   tabEx_10[Ex_10_licznik]= 10 * (Ex_10_licznik+1);
+
+                   System.out.println(tabEx_10[Ex_10_licznik]);
+               }    
                  
                  
     }
