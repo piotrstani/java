@@ -487,7 +487,7 @@ public class Podstawy {
                  /* BREAK i CONTINUE
                   
                   break - np. werfikacij czy ktoś kliknoł jeśli tak to przerwanie wychodzimy z pętli
-                  continue - przerwanie wykonywanie instrukcij petli i przechodzi do kolejnej iteracij 
+                  continue - przerwanie wykonywania 
                   */
                 
                  
@@ -530,8 +530,6 @@ public class Podstawy {
                   }                  
                   }
                   
-                 
-                  
                   System.out.println("***SUMOWANIE ZMIENNYCH**");
                           
                    int[] sumaZmiennych = {1, 2, 3, 4, 10};
@@ -543,9 +541,6 @@ public class Podstawy {
                     }
                    System.out.println(sumaZmiennych_wynik);
     
-                  
-                   
-                   
                    System.out.println("***SUMOWANIE ZMIENNYCH - ENHANCED FOR**");
                           
                    int[] sumaZmiennych2 = {1, 2, 3, 4, 10};
