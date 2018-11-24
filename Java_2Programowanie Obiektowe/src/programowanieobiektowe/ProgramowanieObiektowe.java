@@ -98,8 +98,32 @@ public class ProgramowanieObiektowe {
    
     Car audi = new Car();
     System.out.println("Audi " + audi.rok + " " + audi.szybkosc);
+    
+     // ************KLASA MATEMATYKA****************
+    System.out.println();
+    System.out.println("******MATEMATYKA********");
+    
+    System.out.println(Matematyka.plus(1, 2));
+    System.out.println(Matematyka.PI);
+    
+     // ************KLASA KLIENCI****************
+    System.out.println();
+    System.out.println("******KLIENCI********");
+    
+   Klient a = new Klient ("Ala");
+   Klient b = new Klient ("Ola");
+   Klient c = new Klient ("Ela");
+    
+   System.out.println(a.id); 
+   System.out.println(b.id); 
+   System.out.println(c.id); 
+   
+    
+    
     }   
 }
+
+// ************KLASYY***************
 
         class Monitor // klasa z dużej litery
     {    
@@ -141,7 +165,7 @@ public class ProgramowanieObiektowe {
             return a/b;
          }
                
-        
+       
     } 
 
         //KONSTRUKTORY - pozwala na skonfigurowanie nowo tworzonego obiektu
@@ -166,4 +190,37 @@ public class ProgramowanieObiektowe {
                                 
             int rok;
             int szybkosc;
+    }
+
+
+        //METODY i POLA STATYCZNE
+
+        class Matematyka
+    {       
+         //  po dodaniu static nie jest wymagnae storzenie egzeplarza (rezerwacja miejsca)   
+            
+            // właćiwość final - ostateczna
+            static final double PI = 3.14;
+
+            // metoda                      
+            static int plus (int a, int b)
+            { 
+                 return a + b; 
+            }            
+
+    }
+        class Klient
+    {       
+      Klient (String imie)
+      {
+         this.imie=imie;
+         
+         id = nextId;
+         nextId++;
+      }
+            
+     String imie;
+     int id =0;
+     static int nextId = 1; // wspólne 
+
     }
