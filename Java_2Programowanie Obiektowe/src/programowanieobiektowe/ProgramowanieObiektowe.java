@@ -5,6 +5,8 @@
  */
 package programowanieobiektowe;
 
+
+import newpackage.ClassaPubliczna;
 /**
  *
  * @author PiT
@@ -38,6 +40,7 @@ public class ProgramowanieObiektowe {
     */
 // tworzenie nowego obiektu i rezerwacja miejsca w pamieci, mozemy się odwoływać         
     
+
  // **************KLASA MONITORY*************
    System.out.println();
    System.out.println("******MONITORY********");
@@ -86,7 +89,7 @@ public class ProgramowanieObiektowe {
     double iloraz = LG.dzielenie(LG.szer, LG.wys);
     System.out.println("Wynik dzielenia: "+ LG.nazwa+ " "  + iloraz);
     
-    
+
     
  // ************KLASA SAMOCHODY*****************
     System.out.println();
@@ -118,7 +121,10 @@ public class ProgramowanieObiektowe {
    System.out.println(b.id); 
    System.out.println(c.id); 
    
-    
+    // U ZYCIE KLASY Z INNEGO PAKUNKU
+    System.out.println();
+    System.out.println("******KLASA Z INNEGO PAKIETU********");
+    System.out.println(ClassaPubliczna.napis_ClassaPubliczna);
     
     }   
 }
