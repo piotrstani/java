@@ -91,7 +91,7 @@ public class ProgramowanieObiektowe {
     
 
     
- // ************KLASA SAMOCHODY*****************
+ // ************UŻYCIEKLASA SAMOCHODY*****************
     System.out.println();
     System.out.println("******SAMOCHODY********");
     
@@ -102,14 +102,14 @@ public class ProgramowanieObiektowe {
     Car audi = new Car();
     System.out.println("Audi " + audi.rok + " " + audi.szybkosc);
     
-     // ************KLASA MATEMATYKA****************
+     // ************UŻYCIE KLASA MATEMATYKA****************
     System.out.println();
     System.out.println("******MATEMATYKA********");
     
     System.out.println(Matematyka.plus(1, 2));
     System.out.println(Matematyka.PI);
     
-     // ************KLASA KLIENCI****************
+     // ************UŻYCIE KLASA KLIENCI****************
     System.out.println();
     System.out.println("******KLIENCI********");
     
@@ -125,7 +125,30 @@ public class ProgramowanieObiektowe {
     System.out.println();
     System.out.println("******KLASA Z INNEGO PAKIETU********");
     System.out.println(ClassaPubliczna.napis_ClassaPubliczna);
+ 
+// ************UŻYCIE KLASA BANK*****************
+    System.out.println();
+    System.out.println("******BANK********");
     
+    Bank lokataBank = new Bank();
+
+    // pobierz informacje o saldzie
+    System.out.println("Saldo: " + lokataBank.getSaldo() + " zł");
+    
+    // ustaw saldo
+    
+    lokataBank.setSaldo(10000);
+    System.out.println("Saldo: " + lokataBank.getSaldo() + " zł");
+    
+    
+    // wypłaty
+    
+    if (lokataBank.wyplata(100000))
+    {
+    System.out.println("Saldo po wypłacie: " + lokataBank.getSaldo() + " zł");
+    }
+    else
+    System.out.println("Za mało kasy");    
     }   
 }
 
@@ -230,3 +253,44 @@ public class ProgramowanieObiektowe {
      static int nextId = 1; // wspólne 
 
     }
+
+        class Bank
+        // do wartości private mozemy dostać się z poziomu klasy, 
+    {       
+      {
+            saldoBank = 100;
+      }
+      private int saldoBank;
+      int getSaldo ()// get (w ang) piszemy przed funkją która ma zwrócić
+      { 
+          return saldoBank; 
+      }
+      
+      /* 
+      POWINNY BYĆ WARUNKI CZY MOZNA ZMIENIC STAN SALDA
+      */
+      
+      
+      void setSaldo (int saldo)
+      {
+      this.saldoBank=saldo;
+      }
+      
+      boolean wyplata( int ileWyplataoBnak)
+      {
+          
+      if (saldoBank < ileWyplataoBnak)
+      {
+          return false;
+            
+      }
+     else 
+          setSaldo(saldoBank - ileWyplataoBnak );
+      return true;
+      }
+      
+    }
+            
+    
+
+    
