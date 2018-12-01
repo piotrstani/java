@@ -156,7 +156,9 @@ public class ProgramowanieObiektowe {
     System.out.println();
     System.out.println("******REFERENCJE********");
     
-    
+    /*      typ prymitywny - int ....
+            typ referencyjny (klasowy) - x()
+    */
     
     int aReferencja = 20;
     int bReferencja = aReferencja;
@@ -177,6 +179,7 @@ public class ProgramowanieObiektowe {
     
     Referencja YReferencja = XReferencja;
     // adres YReferenja = XReferenja, zmiana czekoś po stronie Y => X i odwrotnie
+    // dodsnie new spowodowało utworzenia nowego miejsca w pamieci Y<>X   
     
     YReferencja.aReferencja=5;
     YReferencja.bReferencja=1;
@@ -184,25 +187,85 @@ public class ProgramowanieObiektowe {
     System.out.println("Referencja a po X=Y: " + XReferencja.aReferencja);
     System.out.println("Referencja b po X=Y: " + XReferencja.bReferencja);
     
+    // String zachowuke sie wyjątkowo ze wzgledu ze jest czesto używana klasa 
+    // String imieReferencje2 = imieReferencje;  -> String imieReferencje2 =  new String (imieReferencje);
+    // to co wyżej rezerwuje nowe miejsce w pamięci  
+    
     String imieReferencje = "Ala";
     String imieReferencje2 = imieReferencje; 
     
-    
     imieReferencje2 ="Ola";
-    System.out.println(imieReferencje);
+    System.out.println("String jest INNY: " + imieReferencje);
+    
+    // String jest INNY
+    
+    int cReferencje = 3;
+  //  int zmienReferencje = cReferencje;
+    
+    Referencja ZReferencje = new Referencja();
+    
+    ZReferencje.zmienReferencjeVOID(cReferencje);
+    System.out.println("Wynik z głównej klasy kiedy metoda void: " + cReferencje);
+    
+   
+    ZReferencje.zmienReferencjeINT(cReferencje);
+   
+    int dReferencje = ZReferencje.zmienReferencjeINT(cReferencje);
+     
+    System.out.println("Wynik z głównej klasy kiedy metoda int: " + dReferencje);
+    
+    
+  
+ 
+    
+    ReferencjaNowa VReferencje = new ReferencjaNowa();
+    ZReferencje.zmienReferencjeINT(VReferencje);
+   
+    
     
     
     }   
 }
 
-class Referencja
-{
- int aReferencja =10;
- int bReferencja =33;
-}
+
 
 
 // ************KLASYY***************
+    
+    // ************KLASA REFERNCJE***************
+
+        class Referencja
+    {
+        int aReferencja =10;
+        int bReferencja =33;
+        void zmienReferencjeVOID (int zmienReferencje)
+        {
+         // parametr zmienReferencje jest loklany istnieje tylko wobrębie metody
+            zmienReferencje = zmienReferencje +100;
+            System.out.println("Wynik z loklnej klasy metoda void:" + zmienReferencje);
+        }
+        
+        int zmienReferencjeINT (int zmienReferencjeINT)
+        {
+         // parametr zmienReferencje jest loklany istnieje tylko wobrębie metody
+            zmienReferencjeINT = zmienReferencjeINT +200;
+            System.out.println("Wynik z loklnej klasy metoda INT:" + zmienReferencjeINT);
+            return zmienReferencjeINT;
+        }
+         void zmienReferencjaNowa (ReferencjaNowa zmienReferencjeNowa)
+           // można pzryjac klasę k      
+         {
+         zmienReferencjeNowa.eReferencja = zmienReferencjeNowa.eReferencja + 1;
+         }
+        
+        
+    }
+        class ReferencjaNowa
+        {
+            
+           int eReferencja = 99;
+            
+        }
 
         class Monitor // klasa z dużej litery
     {    
