@@ -148,9 +148,59 @@ public class ProgramowanieObiektowe {
     System.out.println("Saldo po wypłacie: " + lokataBank.getSaldo() + " zł");
     }
     else
-    System.out.println("Za mało kasy");    
+    {
+        System.out.println("Za mało kasy"); 
+    }
+   
+// ************REFERENCJE*****************
+    System.out.println();
+    System.out.println("******REFERENCJE********");
+    
+    
+    
+    int aReferencja = 20;
+    int bReferencja = aReferencja;
+    
+    System.out.println("Referencja a przed konstruktorem: " + aReferencja);
+    System.out.println("Referencja b przed konstruktorem: " + bReferencja);
+    
+    bReferencja = 44;
+    
+    System.out.println("Referencja b przed konstruktorem, zmiana: " + bReferencja);
+        
+    
+    Referencja XReferencja = new Referencja(); 
+    // w sumie XReferenja jest adresem (miejscem w pamięci, nie zwiera wartości
+  
+    System.out.println("Referencja a po konstruktorze: " + XReferencja.aReferencja);
+    System.out.println("Referencja b po konstruktorze: " + XReferencja.bReferencja);
+    
+    Referencja YReferencja = XReferencja;
+    // adres YReferenja = XReferenja, zmiana czekoś po stronie Y => X i odwrotnie
+    
+    YReferencja.aReferencja=5;
+    YReferencja.bReferencja=1;
+    
+    System.out.println("Referencja a po X=Y: " + XReferencja.aReferencja);
+    System.out.println("Referencja b po X=Y: " + XReferencja.bReferencja);
+    
+    String imieReferencje = "Ala";
+    String imieReferencje2 = imieReferencje; 
+    
+    
+    imieReferencje2 ="Ola";
+    System.out.println(imieReferencje);
+    
+    
     }   
 }
+
+class Referencja
+{
+ int aReferencja =10;
+ int bReferencja =33;
+}
+
 
 // ************KLASYY***************
 
