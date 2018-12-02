@@ -192,9 +192,9 @@ public class ProgramowanieObiektowe {
     // to co wyżej rezerwuje nowe miejsce w pamięci  
     
     String imieReferencje = "Ala";
-    String imieReferencje2 = imieReferencje; 
+    String imieReferencjeString = imieReferencje; 
     
-    imieReferencje2 ="Ola";
+    imieReferencjeString ="Ola";
     System.out.println("String jest INNY: " + imieReferencje);
     
     // String jest INNY
@@ -214,16 +214,47 @@ public class ProgramowanieObiektowe {
      
     System.out.println("Wynik z głównej klasy kiedy metoda int: " + dReferencje);
     
-    
-  
+    //2
+   int eReferencje =5;
  
-    
-    ReferencjaNowa VReferencje = new ReferencjaNowa();
-    ZReferencje.zmienReferencjeINT(VReferencje);
+   Referencja VReferencje = new Referencja();
    
+    eReferencje = VReferencje.zmienReferencjeINT(eReferencje);
+    System.out.println("Wynik dla 2: " + eReferencje);
     
+    ReferencjaNowa Foo = new ReferencjaNowa();
     
+    VReferencje.zmienReferencjaNowa(Foo);
+    System.out.println("Wynik dla 3: " + Foo.fReferencja);
     
+    // ************SRING STRINGOWI NIE RÓWNY*****************
+    System.out.println();
+    System.out.println("******SRING STRINGOWI NIE RÓWNYE********");
+    
+    String imie1 = "Ala";
+    String imie2 = "Ala";
+    if (imie1 == imie2)    
+        System.out.println(" 1 i 2 Są równe bo jest optymalizacja - to sam adres");   
+    else
+        System.out.println("Nie są równe");
+       
+
+    String imie3 = new String("Ola");
+    String imie4 = new String("Ola");
+     if (imie3 == imie4)
+       System.out.println("???");
+     else     
+       System.out.println(" 3 i 4 Nie są równe bo są różne adresy");
+    
+    String imie5 = new String("Ela");
+    String imie6 = new String("Ela");
+     if (imie5.equals(imie6))
+       System.out.println(" 5 i 6 Są równe bo użyto metody equals - pomimo że są różne adresy");
+     else     
+       System.out.println("???"); 
+     
+     
+       
     }   
 }
 
@@ -231,43 +262,7 @@ public class ProgramowanieObiektowe {
 
 
 // ************KLASYY***************
-    
-    // ************KLASA REFERNCJE***************
-
-        class Referencja
-    {
-        int aReferencja =10;
-        int bReferencja =33;
-        void zmienReferencjeVOID (int zmienReferencje)
-        {
-         // parametr zmienReferencje jest loklany istnieje tylko wobrębie metody
-            zmienReferencje = zmienReferencje +100;
-            System.out.println("Wynik z loklnej klasy metoda void:" + zmienReferencje);
-        }
-        
-        int zmienReferencjeINT (int zmienReferencjeINT)
-        {
-         // parametr zmienReferencje jest loklany istnieje tylko wobrębie metody
-            zmienReferencjeINT = zmienReferencjeINT +200;
-            System.out.println("Wynik z loklnej klasy metoda INT:" + zmienReferencjeINT);
-            return zmienReferencjeINT;
-        }
-         void zmienReferencjaNowa (ReferencjaNowa zmienReferencjeNowa)
-           // można pzryjac klasę k      
-         {
-         zmienReferencjeNowa.eReferencja = zmienReferencjeNowa.eReferencja + 1;
-         }
-        
-        
-    }
-        class ReferencjaNowa
-        {
-            
-           int eReferencja = 99;
-            
-        }
-
-        class Monitor // klasa z dużej litery
+            class Monitor // klasa z dużej litery
     {    
          int szer; // propeties 
          int wys;
@@ -305,12 +300,10 @@ public class ProgramowanieObiektowe {
             else
                 
             return a/b;
-         }
-               
-       
-    } 
+         }    
+      } 
 
-        //KONSTRUKTORY - pozwala na skonfigurowanie nowo tworzonego obiektu
+//KONSTRUKTORY - pozwala na skonfigurowanie nowo tworzonego obiektu
         class Car
     {       
             // co się ma stać po wywołaniu  - konstruktory
@@ -335,7 +328,7 @@ public class ProgramowanieObiektowe {
     }
 
 
-        //METODY i POLA STATYCZNE
+//METODY i POLA STATYCZNE
 
         class Matematyka
     {       
@@ -403,7 +396,36 @@ public class ProgramowanieObiektowe {
       }
       
     }
-            
+// ************KLASA REFERNCJE***************
+
+        class Referencja
+    {
+        int aReferencja =10;
+        int bReferencja =33;
+        void zmienReferencjeVOID (int zmienReferencje)
+        {
+         // parametr zmienReferencje jest loklany istnieje tylko wobrębie metody
+            zmienReferencje = zmienReferencje +100;
+            System.out.println("Wynik z loklnej klasy metoda void:" + zmienReferencje);
+        }
+        
+        int zmienReferencjeINT (int zmienReferencjeINT)
+        {
+         // parametr zmienReferencje jest loklany istnieje tylko wobrębie metody
+            zmienReferencjeINT = zmienReferencjeINT +200;
+            System.out.println("Wynik z loklnej klasy metoda INT:" + zmienReferencjeINT);
+            return zmienReferencjeINT;
+        }
+         void zmienReferencjaNowa (ReferencjaNowa zmienReferencjeINT)
+           // można pzryjac klasę k      
+         {
+         zmienReferencjeINT.fReferencja = zmienReferencjeINT.fReferencja + 1;
+         }                
+    }
+        class ReferencjaNowa
+        {          
+           int fReferencja = 99;            
+        }        
     
 
     
